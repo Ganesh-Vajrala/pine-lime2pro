@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="main-outer-container">
+        <div class="header"> <!--logo-->
+            <img src="https://static.wixstatic.com/media/c29151_a81098d8571643eca290af473c9e71d4~mv2.png/v1/crop/x_0,y_63,w_439,h_79/fill/w_325,h_59,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Pine_and_lime_full_logo_edited.png" alt="logo" class="logo">
+        </div>
+    <div class="main-container">
+        <div class="map-container">
+          <div class="map-card-container">
+        <div id="map">                           <!--Google map Api -->
+            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCinCjqzSRndPueRyS3FnRpnKMZlSgTDow", v: "weekly"});</script>
+        </div>
+        <div class="map-des-container">
+            <p class="place-special" id="description">LIFE</p>
+            <div>                                                           <!--Description under Map-->
+                <p class="map-country-name" id="countryName">INDIA</p>
+                <p class="map-lt-lo-points" id="altitude">17.1102/72.2221</p>
+                <p class="map-date" id="date">27/12/23</p>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+        <div class="inner-container">
+            <h1 class="description-container-head">MileStone Map</h1>
+            <form id="myForm">
+                <div class="form-section">
+                    <label class="form-label" for="location">                         <!--form filling-->
+                        Enter Your Location
+                    </label>
+                    <input type="text" id="location" class="form-input" value="Hyderabad"/>
+                </div>
+                <div class="form-section">
+                    <label class="form-label" for="caption" >
+                        Enter Caption for Map
+                    </label>
+                    <input type="text" id="caption" class="form-input" value="LIFE"/>
+                </div>
+                <div class="form-section">
+                    <label class="form-label" for="title">
+                        Enter Title for Map
+                    </label>
+                    <input type="text" id="title" class="form-input" value="INDIA"/>
+                </div>
+                <button class="submit-button" type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+</html>
+</body>
